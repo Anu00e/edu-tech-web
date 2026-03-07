@@ -2,92 +2,94 @@
 
 @@include('blocks/navigation.htm')
 
-@@include('blocks/page-title.htm', { "page-title" : "Our Blog", "page-link": "blog.html", "single-page-title":
-"Blog Details", "nasted": "nasted", "description" : "Our courses offer a good compromise between the continuous assessment favoured by some universities and the emphasis placed on final exams by others." })
+@@include('blocks/page-title.htm', {
+  "page-title": "Insights",
+  "page-link": "blog.html",
+  "single-page-title": "Student Preparation & Program Experience",
+  "nasted": "nasted",
+  "description": "Understanding current student challenges and how Cognira structures solutions through competitions and programs."
+})
 
 <!-- blog details -->
 <section class="section-sm bg-gray">
   <div class="container">
-    <div class="row">
-      <div class="col-12 mb-4">
-        <img src="images/blog/blog-single.jpg" alt="blog-thumb" class="img-fluid w-100">
+    <div class="row justify-content-center">
+
+      <!-- reduced image -->
+      <div class="col-lg-8 mb-4">
+        <img id="blog-img" src="images/blog/post-1.jpg" alt="blog-thumb" class="img-fluid rounded" style="max-height:280px; object-fit:cover;">
       </div>
-      <div class="col-12">
-        <ul class="list-inline">
-          <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light"><span class="font-weight-bold mr-2">Post:</span>Somrat</li>
-          <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light">August 28, 2017</li>
-          <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light"><i class="ti-book mr-2"></i>Read 289</li>
-          <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light"><i class="ti-share mr-2"></i>289</li>
-          <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light"><a class="text-light" href="blog-single.html"><i class="ti-comments mr-2"></i>265</a></li>
-        </ul>
+
+      <div class="col-lg-8">
+        <p class="text-muted mb-3" id="blog-date"></p>
+
+        <h2 id="blog-title" class="mb-4"></h2>
+
+        <p id="blog-description"></p>
+
       </div>
-      <!-- border -->
-      <div class="col-12 mt-4">
-        <div class="border-bottom border-primary"></div>
-      </div>
-      <!-- blog contect -->
-      <div class="col-12 mb-5">
-        <h2>Lorem ipsum dolor amet, consectetur adipisicing eiusmod tempor </h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-          anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-          laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-          consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-          ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-          labore et dolore magnam aliquam quaerat voluptatem.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-          anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-          laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-          consequuntur magni dolores eos qui ratione voluptatem s</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-          anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-          laudantium, totam rem aperiam, </p>
-      </div>
-      <!-- comment box -->
-      <div class="col-12">
-        <form action="#" class="row">
-          <div class="col-sm-6">
-            <input type="text" class="form-control mb-4" id="name" name="name" placeholder="Full Name" required>
-          </div>
-          <div class="col-sm-6">
-            <input type="email" class="form-control mb-4" id="mail" name="mail" placeholder="Email Address" required>
-          </div>
-          <div class="col-12">
-            <textarea name="comment" id="comment" class="form-control mb-4" placeholder="Comment Here..." required></textarea>
-          </div>
-          <div class="col-12">
-            <button type="submit" value="send" class="btn btn-primary">post comment</button>
-          </div>
-        </form>
-      </div>
+
     </div>
   </div>
 </section>
 <!-- /blog details -->
 
-<!-- recommended post -->
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="section-title">Recommended</h2>
-      </div>
-    </div>
-    @@include('blocks/blog.htm')
-  </div>
-</section>
-<!-- /recommended post -->
-
 @@include('blocks/footer.htm')
-
 @@include('footer.htm')
+
+<script>
+const blogData = {
+  "student-competition-experience": {
+    title: "Preparing Students for Competitions & School / College Programs – Cognira’s Experience",
+    img: "images/blog/post-1.jpg",
+    date: "November 05, 2025",
+    description: `
+      Over the past few years, extensive educational research and on-ground interaction with schools
+      and colleges have revealed a critical gap in student preparedness.
+
+      <br><br>
+      Most students today face challenges such as lack of structured guidance, limited exposure to
+      competitive environments, weak problem-solving strategies, and unclear career direction.
+      Traditional academic learning alone is no longer sufficient to prepare students for
+      real-world competition, higher education, or placement readiness.
+
+      <br><br>
+      At Cognira, our journey began after October 22, focusing specifically on understanding these
+      gaps through direct engagement with students, teachers, and institutions.
+      Our findings consistently showed that students perform better when learning is
+      competitive, guided, and goal-oriented.
+
+      <br><br>
+      To address this, Cognira designed structured student competitions, school-level programs,
+      and college readiness initiatives that go beyond textbooks.
+      These programs focus on strategy building, logical thinking, aptitude development,
+      confidence enhancement, and real-time assessment.
+
+      <br><br>
+      Through national-level competitions, students gain exposure, motivation, and recognition.
+      School and college programs further strengthen foundational skills while aligning students
+      with future academic and career expectations.
+
+      <br><br>
+      Cognira’s approach is simple: identify gaps early, apply structured strategies,
+      and guide students through meaningful learning experiences that prepare them
+      for both competitions and long-term success.
+    `
+  }
+};
+
+const urlParams = new URLSearchParams(window.location.search);
+const postKey = urlParams.get('post');
+
+if (postKey && blogData[postKey]) {
+  const post = blogData[postKey];
+  document.getElementById('blog-title').textContent = post.title;
+  document.getElementById('blog-img').src = post.img;
+  document.getElementById('blog-date').textContent = post.date;
+  document.getElementById('blog-description').innerHTML = post.description;
+} else {
+  document.getElementById('blog-title').textContent = "Post Not Found";
+  document.getElementById('blog-description').textContent =
+    "The blog you are looking for is not available.";
+}
+</script>

@@ -100,5 +100,77 @@
 	$(window).on('scroll', function () {
 		counter();
 	});
+	document.addEventListener("DOMContentLoaded", function() {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const courses = document.querySelectorAll(".row > .col-lg-3");
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", function() {
+      const filter = this.dataset.filter;
+      courses.forEach(course => {
+        if(filter === "all" || course.classList.contains(filter)) {
+          course.style.display = "block";
+        } else {
+          course.style.display = "none";
+        }
+      });
+    });
+  });
+});
+
 
 })(jQuery);
+/* =========================================
+   EVENT FLIP CARDS – SEQUENTIAL SCROLL FLIP
+========================================= */
+
+var $cards = $('.flip-card');
+if ($cards.length && 'IntersectionObserver' in window) {
+
+  var delayIndex = 0;
+
+  var observer = new IntersectionObserver(function (entries) {
+
+    entries.forEach(function (entry) {
+
+      if (entry.isIntersecting && !$(entry.target).hasClass('flipped')) {
+
+        (function (card, delay) {
+          setTimeout(function () {
+            $(card).addClass('flipped');
+          }, delay);
+        })(entry.target, delayIndex * 800);
+
+        delayIndex++;
+        observer.unobserve(entry.target);
+      }
+
+    });
+
+  }, {
+    threshold: 0.4
+  });
+
+  $cards.each(function () {
+    observer.observe(this);
+  });
+}
+
+/* Click behavior */
+$cards.each(function () {
+
+  var clickedOnce = false;
+  var link = $(this).data('link');
+
+  $(this).on('click', function () {
+
+    if (!clickedOnce) {
+      $(this).toggleClass('flipped');
+      clickedOnce = true;
+    } else if (link) {
+      window.location.href = link;
+    }
+
+  });
+
+});

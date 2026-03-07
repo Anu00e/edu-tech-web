@@ -2,17 +2,45 @@
 
 @@include('blocks/navigation.htm', {"courses": "active"})
 
-@@include('blocks/page-title.htm', {"page-link": "index.html", "page-title" : "Home" , "nasted" : "nasted" , "description" : "Our courses offer a good compromise between the continuous assessment favoured by some universities and the emphasis placed on final exams by others.", "single-page-title": "Our Courses" })
+@@include('blocks/page-title.htm', {
+  "page-link": "index.html",
+  "page-title": "Courses",
+  "nasted": "nasted",
+  "description": "Explore Cognira Edutech programs designed for learners, students, and professionals. Our courses focus on academic support, technical skills, career guidance, and placement readiness.",
+  "single-page-title": "Our Courses"
+})
 
-<!-- courses -->
+<!-- Filter Buttons -->
+<section class="section py-4 bg-light">
+  <div class="container text-center">
+    <div class="btn-group mb-4" role="group">
+      <button class="btn btn-outline-primary filter-btn" data-filter="all">All</button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="filter-academic">Academic</button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="filter-placement">Placement</button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="filter-career">Career</button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="filter-technical">Technical</button>
+    </div>
+  </div>
+</section>
+
+<!-- Courses Section -->
 <section class="section">
   <div class="container">
     @@include('blocks/course.htm')
-    @@include('blocks/course.htm')
   </div>
 </section>
-<!-- /courses -->
+
+<!-- Register for Updates CTA -->
+<section class="section bg-primary py-5 text-white">
+  <div class="container text-center">
+    <h3>Want to be the first to know when courses launch?</h3>
+    <p class="mb-4">Subscribe to our newsletter and get course updates directly in your inbox.</p>
+    <form class="d-flex justify-content-center" action="https://forms.gle/gv4uQwAX6dSqMgum6"target="_blank">
+      <input type="email" class="form-control w-50 me-2" placeholder="Enter your email">
+      <button type="submit" class="btn btn-dark">Subscribe</button>
+    </form>
+  </div>
+</section>
 
 @@include('blocks/footer.htm')
-
 @@include('footer.htm')

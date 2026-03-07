@@ -2,31 +2,37 @@
 
 @@include('blocks/navigation.htm')
 
-@@include('blocks/page-title.htm', { "page-title" : "Upcoming Events", "page-link": "events.html", "single-page-title":
-"Event Details", "nasted": "nasted", "description" : "Our courses offer a good compromise between the continuous assessment favoured by some universities and the emphasis placed on final exams by others." })
+@@include('blocks/page-title.htm', { 
+  "page-title" : "Upcoming Events", 
+  "page-link": "events.html", 
+  "single-page-title": "Event Details", 
+  "nasted": "nasted", 
+  "description" : "Explore detailed information about our upcoming events for students." 
+})
 
 <!-- event single -->
 <section class="section-sm">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="section-title">English Spoken</h2>
+        <h2 id="event-title" class="section-title"></h2>
       </div>
-      <!-- event image -->
-      <div class="col-12 mb-4">
-        <img src="images/events/event-single.jpg" alt="event thumb" class="img-fluid w-100">
+      <!-- event image (reduced size) -->
+      <div class="col-12 mb-4 text-center">
+        <img id="event-img" src="" alt="event thumb" class="img-fluid w-75">
       </div>
     </div>
+
     <!-- event info -->
     <div class="row align-items-center mb-5">
-      <div class="col-lg-9">
-        <ul class="list-inline">
+      <div class="col-12">
+        <ul class="list-inline d-flex flex-wrap">
           <li class="list-inline-item mr-xl-5 mr-4 mb-3 mb-lg-0">
             <div class="d-flex align-items-center">
               <i class="ti-location-pin text-primary icon-md mr-2"></i>
               <div class="text-left">
                 <h6 class="mb-0">LOCATION</h6>
-                <p class="mb-0">Dhanmondi, Dhaka</p>
+                <p class="mb-0" id="event-location"></p>
               </div>
             </div>
           </li>
@@ -34,122 +40,131 @@
             <div class="d-flex align-items-center">
               <i class="ti-calendar text-primary icon-md mr-2"></i>
               <div class="text-left">
-                <h6 class="mb-0">DATE</h6>
-                <p class="mb-0">December-12-18</p>
+                <h6 class="mb-0">STATUS</h6>
+                <p class="mb-0">Upcoming</p>
               </div>
             </div>
           </li>
           <li class="list-inline-item mr-xl-5 mr-4 mb-3 mb-lg-0">
             <div class="d-flex align-items-center">
-              <i class="ti-time text-primary icon-md mr-2"></i>
-              <div class="text-left">
-                <h6 class="mb-0">TIME</h6>
-                <p class="mb-0">04: 00 pm</p>
+              <i class="ti-laptop text-primary icon-md mr-2"></i>
+              <div class="text-left" style="margin-top:0;">
+                <h6 class="mb-0">MODE</h6>
+                <p class="mb-0">Online</p>
               </div>
             </div>
           </li>
           <li class="list-inline-item mr-xl-5 mr-4 mb-3 mb-lg-0">
             <div class="d-flex align-items-center">
-              <i class="ti-wallet text-primary icon-md mr-2"></i>
+              <i class="ti-medall text-primary icon-md mr-2"></i>
               <div class="text-left">
-                <h6 class="mb-0">ENTRY FEE</h6>
-                <p class="mb-0">From: $699</p>
+                <h6 class="mb-0">CERTIFICATE</h6>
+                <p class="mb-0">National Level Certificate for all participants</p>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item mr-xl-5 mr-4 mb-3 mb-lg-0" id="event-prize-item" style="display:none;">
+            <div class="d-flex align-items-center">
+              <i class="ti-gift text-primary icon-md mr-2"></i>
+              <div class="text-left">
+                <h6 class="mb-0">PRIZE</h6>
+                <p class="mb-0">Prize Pool for Rank 1 student (to be announced)</p>
               </div>
             </div>
           </li>
         </ul>
       </div>
-      <div class="col-lg-3 text-lg-right text-left">
-        <a href="event-single.html" class="btn btn-primary">Apply now</a>
+      <div class="col-12 text-left mt-3">
+        <a href="https://forms.gle/gv4uQwAX6dSqMgum6" target="_blank" class="btn btn-primary">Apply Now</a>
       </div>
       <!-- border -->
       <div class="col-12 mt-4 order-4">
         <div class="border-bottom border-primary"></div>
       </div>
     </div>
+
     <!-- event details -->
     <div class="row">
       <div class="col-12 mb-50">
         <h3>About Event</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-          anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-          laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-          consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-          ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-          labore et dolore magnam aliquam quaerat voluptatem.</p>
-      </div>
-    </div>
-    <!-- event speakers -->
-    <div class="row">
-      <div class="col-12">
-        <h3 class="mb-4">Event Speakers</h3>
-      </div>
-      <!-- speakers -->
-      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-        <div class="media">
-          <img class="mr-3 img-fluid" src="images/event-speakers/speaker-1.jpg" alt="speaker">
-          <div class="media-body">
-            <h4 class="mt-0">Jack Mastio</h4>
-            Teacher
-          </div>
-        </div>
-      </div>
-      <!-- speakers -->
-      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-        <div class="media">
-          <img class="mr-3 img-fluid" src="images/event-speakers/speaker-2.jpg" alt="speaker">
-          <div class="media-body">
-            <h4 class="mt-0">John Doe</h4>
-            Teacher
-          </div>
-        </div>
-      </div>
-      <!-- speakers -->
-      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-        <div class="media">
-          <img class="mr-3 img-fluid" src="images/event-speakers/speaker-3.jpg" alt="speaker">
-          <div class="media-body">
-            <h4 class="mt-0">Randy Luis</h4>
-            Teacher
-          </div>
-        </div>
-      </div>
-      <!-- speakers -->
-      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-        <div class="media">
-          <img class="mr-3 img-fluid" src="images/event-speakers/speaker-4.jpg" alt="speaker">
-          <div class="media-body">
-            <h4 class="mt-0">Alfred Jin</h4>
-            Teacher
-          </div>
-        </div>
-      </div>
-      <!-- border -->
-      <div class="col-12 mt-4 order-4">
-        <div class="border-bottom border-primary"></div>
+        <p id="event-description"></p>
       </div>
     </div>
   </div>
 </section>
 <!-- /event single -->
 
-<!-- more event -->
-<section class="section pt-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="section-title">More Events</h2>
-      </div>
-    </div>
-    @@include('blocks/events.htm')
-  </div>
-</section>
-<!-- /more event -->
-
 @@include('blocks/footer.htm')
-
 @@include('footer.htm')
+
+<script>
+  // Event data with extended descriptions
+  const eventsData = {
+    "national-school-quiz": {
+      title: "National Level School Quiz Competition",
+      img: "images/events/e1.jpg",
+      location: "Pan India",
+      prize: true,
+      description: "This National Level School Quiz Competition encourages learning, teamwork, and analytical skills for school students across India. Participants will engage in multiple rounds covering Science, Math, General Knowledge, and Current Affairs. National Level Certificates will be provided to all participants. Prize pool for Rank 1 student will be announced soon. Stay tuned for updates and registration details."
+    },
+    "career-guidance-school": {
+      title: "Career Guidance Program for School Students",
+      img: "images/events/e2.jpg",
+      location: "Online",
+      prize: false,
+      description: "Interactive sessions guiding school students on career choices, education pathways, and skill development. Participants will get National Level Certificates. Includes practical exercises and Q&A sessions with experts."
+    },
+    "placement-readiness-college": {
+      title: "Placement Readiness Challenge for College Students",
+      img: "images/events/e3.jpg",
+      location: "Online",
+      prize: true,
+      description: "A comprehensive challenge preparing college students for placements. Includes mock interviews, aptitude tests, and resume building workshops. National Level Certificates for participants. Prize pool for Rank 1 student will be announced."
+    },
+    "technical-bootcamp": {
+      title: "Technical Awareness Bootcamp",
+      img: "images/events/e4.jpg",
+      location: "Online",
+      prize: false,
+      description: "Bootcamp to introduce students to modern technologies and coding basics. Hands-on projects and interactive sessions. National Level Certificate for participation."
+    },
+    "knowledge-aptitude-challenge": {
+      title: "National Knowledge & Aptitude Challenge",
+      img: "images/events/e5.jpg",
+      location: "Pan India",
+      prize: true,
+      description: "A nationwide challenge testing students' aptitude and general knowledge. National Level Certificate for participants. Prize pool for Rank 1 student will be announced. Competitive format encourages critical thinking and problem solving."
+    },
+    "institutional-career-skill": {
+      title: "Institutional Career & Skill Programs",
+      img: "images/events/e6.jpg",
+      location: "School / College Campus",
+      prize: false,
+      description: "Customized programs for institutions focusing on career guidance, soft skills, and technical skills. National Level Certificates will be provided."
+    }
+  };
+
+  // Get event parameter from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const eventKey = urlParams.get('event');
+
+  if (eventKey && eventsData[eventKey]) {
+    const event = eventsData[eventKey];
+    document.getElementById('event-title').textContent = event.title;
+    document.getElementById('event-img').src = event.img;
+    document.getElementById('event-location').textContent = event.location;
+    document.getElementById('event-description').textContent = event.description;
+
+    // Show prize only for competitions
+    if(event.prize){
+      document.getElementById('event-prize-item').style.display = 'inline-block';
+    } else {
+      document.getElementById('event-prize-item').style.display = 'none';
+    }
+
+  } else {
+    document.getElementById('event-title').textContent = "Event Not Found";
+    document.getElementById('event-description').textContent = "The event you are looking for does not exist.";
+    document.getElementById('event-prize-item').style.display = 'none';
+  }
+</script>
